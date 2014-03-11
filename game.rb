@@ -1,10 +1,10 @@
+require_relative 'library'
+
 class Game
   attr_reader :name
   
   def initialize(name)
     @name = name
-    @year = nil
-    @system = nil
     @tags = []
   end
   
@@ -21,7 +21,7 @@ class Game
   end  
   
   def play
-     raise @system == "SNES"? "No emulator for SNES games." : "Starting #{@name}"
+    raise @system == "SNES"? "No emulator for SNES games." : "Starting #{@name}"
   end
   
   def capture_screenshot
@@ -30,5 +30,9 @@ class Game
   
   def method_missing(method_name, *args)
     @tags << method_name.to_s
+  end
+  
+  def ==(another_game)
+    @name == another_game.name
   end
 end

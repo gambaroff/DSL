@@ -1,3 +1,6 @@
+require_relative('game')
+require_relative('library')
+
 LIBRARY = Library.new
 
 def add_game(name, system = nil, year = nil, &block)

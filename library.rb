@@ -1,4 +1,7 @@
+require_relative 'game'
+
 class Library
+
   def initialize
     @games = []
   end 
