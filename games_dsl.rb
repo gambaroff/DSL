@@ -14,3 +14,10 @@ def with_game(*names, &block)
     game.instance_eval(&block)
   end  
 end
+
+def with_games_tagged(tag, &block)
+  games = LIBRARY.find_by_tag(tag)
+  games.each do |game|
+    game.instance_eval(&block)
+  end
+end

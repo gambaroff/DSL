@@ -21,9 +21,11 @@ class Game
   end  
   
   def play
+     raise @system == "SNES"? "No emulator for SNES games." : "Starting #{@name}"
   end
   
   def capture_screenshot
+    puts "Grabbing a screenshot for #{@name}"
   end  
   
   def method_missing(method_name, *args)
