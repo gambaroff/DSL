@@ -14,4 +14,14 @@ class Game
   def system(value)
     @system = value
   end
+  
+  def print_details
+    puts "#{@name} - #{@year} (#{@system})"
+  end  
+  
+  def play
+  end
+  
+  def capture_screenshot
+  end  
 end
