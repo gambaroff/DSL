@@ -5,6 +5,7 @@ class Game
     @name = name
     @year = nil
     @system = nil
+    @tags = []
   end
   
   def year(value)
@@ -24,4 +25,8 @@ class Game
   
   def capture_screenshot
   end  
+  
+  def method_missing(method_name, *args)
+    @tags << method_name.to_s
+  end
 end

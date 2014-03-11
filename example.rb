@@ -1,6 +1,8 @@
 add_game "Civilization" do
   system "PC"
   year 1991
+  strategy
+  turn_based #tag
 end
 
 add_game "Contra" do
